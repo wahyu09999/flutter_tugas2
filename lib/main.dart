@@ -48,7 +48,12 @@ class Navbar extends StatelessWidget {
                           color: Colors.transparent
                         )
                       ),
-                        child: const Text('BERITA UTAMA'),
+                        child: const Text('BERITA UTAMA',
+                        style: TextStyle(
+                          color: Colors.black
+                        ),
+                      ),
+                        
                         onPressed: () {
                         Navigator.push(
                           context,
@@ -64,7 +69,10 @@ class Navbar extends StatelessWidget {
                           color: Colors.transparent
                         )
                       ),
-                          child: const Text('PERTANDINGAN HARI INI'),
+                          child: const Text('PERTANDINGAN HARI INI',
+                          style: TextStyle(
+                          color: Colors.black
+                        ),),
                           onPressed: () {
                               Navigator.push(
                           context,
