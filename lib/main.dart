@@ -39,13 +39,45 @@ class Navbar extends StatelessWidget {
               margin: const EdgeInsets.all(15),
               height: 20.5,
               child:
-                Row(
+              Expanded(child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const <Widget>[ 
-                  Text("BERITA TERBARU"),     
-                  Text("PERTANDINGAN HARI INI"),
+                  children: [
+                     OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                        side: const BorderSide(
+                          color: Colors.transparent
+                        )
+                      ),
+                        child: const Text('BERITA UTAMA'),
+                        onPressed: () {
+                        Navigator.push(
+                          context,
+                            MaterialPageRoute(builder: (context) => const BeritaKecil()),
+                  );
+                        },
+                        ),
+
+
+                      OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                        side: const BorderSide(
+                          color: Colors.transparent
+                        )
+                      ),
+                          child: const Text('PERTANDINGAN HARI INI'),
+                          onPressed: () {
+                              Navigator.push(
+                          context,
+                            MaterialPageRoute(builder: (context) => const BeritaUtama()),
+                         );
+                        },
+                        
+                        )
+
+
                   ],
-                ),
+              ) ,)
+                
             );
   }
 }
@@ -62,7 +94,7 @@ class BeritaKecil extends StatelessWidget{
   Widget build(BuildContext context) {
 
   return Container(
-              margin: const EdgeInsets.only(left: 10.0, right: 10.0,),
+              margin: const EdgeInsets.only(left: 10.0, right: 10.0,top: 20),
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.grey)
               ),
